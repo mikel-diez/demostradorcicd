@@ -1,0 +1,29 @@
+site_name: Demostrador CICD
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+repo_url: https://github.com/mikel-diez/demostradorcicd
+repo_name: mikel-diez/demostradorcicd
+
+nav:
+  - Home: index.md
+  - Guía:
+    - Instalación: guia/instalacion.md
+    - Configuración: guia/configuracion.md
+    - Uso: guia/uso.md
+  - About: about.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
