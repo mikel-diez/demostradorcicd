@@ -1,25 +1,46 @@
 site_name: Demostrador CICD
+copyright: Copyright &copy; 2024 Mikel Diez
 theme:
   name: material
   language: es
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
+    - navigation.instant
+    - navigation.instant.progress
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
 
 repo_url: https://github.com/mikel-diez/demostradorcicd
 repo_name: mikel-diez/demostradorcicd
 
 nav:
   - Home: index.md
-  - Guía:
-    - Instalación: guia/instalacion.md
-    - Configuración: guia/configuracion.md
-    - Uso: guia/uso.md
+  - Contenidos:
+    - General: general/index.md
+    - Infraestructura: infraestructura/index.md
+    - Aplicación: aplicaciones/index.md
+    - Recursos: recursos/index.md
   - About: about.md
+  # - Legal:
+  #   - Privacy Policy: legal/privacy.md
+  #   - Terms: legal/terms.md
+
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -27,3 +48,18 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mikel-diez
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/your-profile
+    
+  generator: false  # Removes the "Made with Material for MkDocs" text
+  
+
+  
+# Custom footer
+extra_css:
+  - stylesheets/extra.css

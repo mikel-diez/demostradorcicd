@@ -1,0 +1,22 @@
+.md-footer {
+  /* Customize footer background */
+  background-color: #1a1a1a;
+}
+
+.md-footer-meta {
+  /* Customize bottom footer */
+  background-color: #0f0f0f;
+}
+
+/* Customize copyright text */
+.md-copyright {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Optional: Make footer sticky */
+.md-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+} 
