@@ -30,7 +30,7 @@ Plataforma integral de inteligencia artificial diseñada como entorno educativo 
 
 ### MLOps
 - **MLflow**: Gestión del ciclo de vida de modelos
-- **DVC**: Control de versiones para datos
+- **Git/Gitlab**: Control de versiones para datos
 - **Weights & Biases**: Seguimiento de experimentos
 - **FastAPI/Flask**: APIs para servicios de modelos
 
@@ -43,6 +43,36 @@ Plataforma integral de inteligencia artificial diseñada como entorno educativo 
 - **Prometheus/Grafana**: Supervisión de rendimiento
 - **ELK Stack**: Análisis de logs y eventos
 
+## Diagrama General
+
+
+![Arquitectura del sistema](images/diagrama-general.drawio.png)
+
+*Arquitectura general del sistema de demostración IA*
+
+## Recursos
+
+
+### Repositorios
+
+Repositorios
+
+| Repositorio | Descripción |
+|------------|-------------|
+| [demo-ia-infra](https://github.com/mikel-diez/demostradorcicd-infra) | Infraestructura y configuración del sistema |
+| [demo-ia-mlops](https://github.com/mikel-diez/demostradorcicd-mlops) | Herramientas y flujos MLOps |
+| [demo-ia-apps](https://github.com/mikel-diez/demostradorcicd-app) | Aplicaciones y casos de uso |
+| [demo-ia-docs](https://github.com/mikel-diez/demostradorcicd) | Documentación del proyecto |
+
+Estos repos se pueden encontrar dentro del proyecto
+
+[Proyecto Demostrador CICD](https://github.com/users/mikel-diez/projects/1)
+
+### Documentacion 
+
+[📄 Descargar documentación completa en PDF](assets/documentacion-demostradorIA.pdf)
+
+
 ## Casos de uso
 
 - Desarrollo de aplicaciones de IA generativa (texto, imagen)
@@ -50,3 +80,4 @@ Plataforma integral de inteligencia artificial diseñada como entorno educativo 
 - Procesamiento de lenguaje natural y chatbots
 - Despliegue y monitorización de modelos en producción
 - Optimización de rendimiento para inferencia en tiempo real
+
