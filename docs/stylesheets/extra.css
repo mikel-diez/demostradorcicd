@@ -6,17 +6,20 @@
 .md-footer-meta {
   /* Customize bottom footer */
   background-color: #0f0f0f;
+  min-height: 0.05rem;          /* Make it smaller */
+  padding: 0.05rem;          /* Reduce padding */
 }
 
 /* Customize copyright text */
 .md-copyright {
   color: #ffffff;
   font-weight: bold;
+  font-size: 0.7rem;        /* Smaller text */
 }
 
-/* Optional: Make footer sticky */
-.md-footer {
+/* Remove the sticky positioning */
+/* .md-footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-} 
+} */ 
