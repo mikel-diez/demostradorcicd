@@ -5,14 +5,21 @@
 
 Plataforma integral de inteligencia artificial diseñada como entorno educativo de alto rendimiento para 10 alumnos, proporcionando una infraestructura completa que simula escenarios reales de desarrollo, preproducción y producción de sistemas IA.
 
+## Colaboradores
 
-Centros colaboradores
+### Centros colaboradores
+<center>
 
 | Profesor  | Centro |
 |-----------|-----------|
-| Daniel Espiñeira   | Celda 2   |
-| Mikel Díez   | Celda 4   |
+| Daniel Espiñeira   | IES Fernando Writz (Lider)   |
+| Mikel Díez   | CF Somorrostro   |
 
+</center>
+### Empresas Colaboradoras
+ 
+1. Roiward
+2. Dative
 
 ## Capacidades clave
 
@@ -55,9 +62,11 @@ Centros colaboradores
 ## Diagrama General
 
 
-![Arquitectura del sistema](images/diagrama-general.drawio.png)
+<center> ![Arquitectura del sistema](assets/images/diagramas/diagrama-general.drawio.png) </center>
+---
 
-*Arquitectura general del sistema de demostración IA*
+
+<center>*Arquitectura general del sistema de demostración IA*</center>
 
 ## Recursos
 

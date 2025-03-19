@@ -2,6 +2,9 @@ site_name: Demostrador CICD
 copyright: Copyright &copy; 2024 Mikel Diez
 theme:
   name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
   language: es
   features:
     - navigation.sections
@@ -13,18 +16,8 @@ theme:
     - navigation.instant.progress
   palette:
     # Palette toggle for light mode
-    - scheme: default
-      primary: teal
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - scheme: slate
-      primary: teal
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to light mode
+      primary: indigo
   custom_dir: docs/overrides
 
 repo_url: https://github.com/mikel-diez/demostradorcicd
