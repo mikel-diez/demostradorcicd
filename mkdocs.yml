@@ -25,6 +25,7 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to light mode
+  custom_dir: docs/overrides
 
 repo_url: https://github.com/mikel-diez/demostradorcicd
 repo_name: mikel-diez/demostradorcicd
@@ -33,7 +34,10 @@ nav:
   - Home: index.md
   - Contenidos:
     - General: general/index.md
-    - Infraestructura: infraestructura/index.md
+    - Infraestructura:
+      - General: infraestructura/index.md
+      - Cluster: infraestructura/cluster/index.md
+      - Plantillas: infraestructura/plantillas/index.md
     - Aplicación: aplicaciones/index.md
     - Recursos: recursos/index.md
   - About: about.md

@@ -5,6 +5,15 @@
 
 Plataforma integral de inteligencia artificial diseñada como entorno educativo de alto rendimiento para 10 alumnos, proporcionando una infraestructura completa que simula escenarios reales de desarrollo, preproducción y producción de sistemas IA.
 
+
+Centros colaboradores
+
+| Profesor  | Centro |
+|-----------|-----------|
+| Daniel Espiñeira   | Celda 2   |
+| Mikel Díez   | Celda 4   |
+
+
 ## Capacidades clave
 
 - **Entorno multi-usuario**: Soporte para 10 alumnos trabajando simultáneamente
@@ -70,7 +79,7 @@ Estos repos se pueden encontrar dentro del proyecto
 
 ### Documentacion 
 
-[📄 Descargar documentación completa en PDF](assets/documentacion-demostradorIA.pdf)
+[📄 Descargar documentación completa en PDF](assets/docs/DemostradorIACICD.pdf)
 
 
 ## Casos de uso
