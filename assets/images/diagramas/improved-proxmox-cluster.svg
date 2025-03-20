@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#A3BFFA"/>
+    </marker>
+    <bx:export>
+      <bx:file format="png" path="Sin título.png"/>
+    </bx:export>
+  </defs>
+  <rect width="515.692" height="507.45" fill="#2d3748" rx="12.112" ry="12.112" x="-6.447" y="-4.083" style=""/>
+  <text x="102.389" y="-259.37" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 32px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Proxmox AI Development Cluster</text>
+  <text x="102.389" y="-229.37" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 18px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">(3-Node High-Availability Setup)</text>
+  <rect x="59.548" y="55.734" width="379.582" height="25.065" rx="20" ry="20" fill="#3182CE" stroke="#63B3ED" stroke-width="2" style=""/>
+  <text x="102.389" y="-184.37" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#FFFFFF" style="white-space: pre; font-size: 18px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">WAN Network (Internet Access)</text>
+  <polygon points="236.688 86.833 261.991 86.833 255.664 98.763 243.012 98.763" fill="#FC8181" stroke="#F56565" stroke-width="2" style=""/>
+  <text x="102.389" y="-122.63" font-family="Arial" font-size="14" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Firewall/Gateway</text>
+  <rect x="27.916" y="112.129" width="442.846" height="347.771" rx="10" ry="10" fill="#1a202c" stroke="#4a5568" stroke-width="3" style=""/>
+  <rect x="43.732" y="121.528" width="411.214" height="21.931" rx="15" ry="15" fill="#4FD1C5" stroke="#38B2AC" stroke-width="2" style=""/>
+  <text x="102.389" y="-82.367" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1A202C" style="white-space: pre; font-size: 16px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Proxmox Internal Network (10.0.0.0/24)</text>
+  <rect x="50.058" y="149.728" width="126.527" height="81.46" rx="8" ry="8" fill="#DD6B20" fill-opacity="0.2" stroke="#DD6B20" stroke-width="2" style=""/>
+  <text x="-112.61" y="-39.367" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 18px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Node 1</text>
+  <text x="-112.61" y="-19.367" font-family="Arial" font-size="14" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">DEVELOPMENT</text>
+  <text x="-112.61" y="0.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">•2x NVIDIA 4080</text>
+  <text x="-112.61" y="20.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 64GB RAM</text>
+  <text x="-112.61" y="40.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 48-Core CPU</text>
+  <text x="-112.61" y="60.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 10TB NVMe Storage</text>
+  <rect x="186.077" y="149.728" width="126.527" height="81.46" rx="8" ry="8" fill="#DD6B20" fill-opacity="0.2" stroke="#DD6B20" stroke-width="2" style=""/>
+  <text x="102.389" y="-39.367" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 18px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Node 2 </text>
+  <text x="102.389" y="-19.367" font-family="Arial" font-size="14" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">DEVELOPMENT</text>
+  <text x="102.389" y="0.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• •2x NVIDIA 4080</text>
+  <text x="102.389" y="20.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 64 GB RAM</text>
+  <text x="102.389" y="40.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 48-Core CPU</text>
+  <text x="102.389" y="60.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 10TB NVMe Storage</text>
+  <rect x="322.091" y="149.728" width="126.527" height="81.46" rx="8" ry="8" fill="#DD6B20" fill-opacity="0.2" stroke="#DD6B20" stroke-width="2" style=""/>
+  <text x="317.389" y="-39.367" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 18px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Node 3 </text>
+  <text x="317.389" y="-19.367" font-family="Arial" font-size="14" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">GPU NODE</text>
+  <text x="317.389" y="0.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 2× NVIDIA a800</text>
+  <text x="317.389" y="20.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 256GB RAM</text>
+  <text x="317.389" y="40.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 32-Core CPU</text>
+  <text x="317.389" y="60.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">• 5TB NVMe Storage</text>
+  <rect x="43.732" y="237.454" width="411.214" height="28.198" rx="8" ry="8" fill="#6B46C1" fill-opacity="0.2" stroke="#6B46C1" stroke-width="2" style=""/>
+  <text x="102.389" y="110.633" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 20px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">AI Platform Services</text>
+  <rect x="81.69" y="271.918" width="94.896" height="31.331" rx="5" ry="5" fill="#6B46C1" stroke="#9F7AEA" stroke-width="2" style=""/>
+  <text x="-87.607" y="155.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Python stack</text>
+  <text x="-87.607" y="175.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Experiment Tracking</text>
+  <rect x="201.893" y="271.918" width="94.896" height="31.331" rx="5" ry="5" fill="#6B46C1" stroke="#9F7AEA" stroke-width="2" style=""/>
+  <text x="102.389" y="155.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">DVC &amp; GIT</text>
+  <text x="102.389" y="175.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Data Versioning</text>
+  <rect x="322.091" y="271.918" width="94.896" height="31.331" rx="5" ry="5" fill="#6B46C1" stroke="#9F7AEA" stroke-width="2" style=""/>
+  <text x="292.389" y="155.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">TensorBoard</text>
+  <text x="292.389" y="175.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Model Visualization</text>
+  <rect x="43.732" y="309.514" width="411.214" height="68.928" rx="8" ry="8" fill="#2b6cb0" fill-opacity="0.2" stroke="#2b6cb0" stroke-width="2" style=""/>
+  <text x="102.389" y="215.633" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 20px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Development Environments (Virtual Machines)</text>
+  <rect x="65.874" y="328.313" width="113.875" height="40.73" rx="5" ry="5" fill="#2c5282" stroke="#2b6cb0" stroke-width="2" style=""/>
+  <text x="-97.607" y="245.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">DevEnv1 VM</text>
+  <text x="-97.607" y="265.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Model Training</text>
+  <text x="-97.607" y="280.633" font-family="Arial" font-size="10" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 10px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)"> </text>
+  <rect x="78.527" y="331.446" width="12.653" height="9.399" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1" style=""/>
+  <rect x="76.629" y="334.579" width="16.449" height="9.399" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1" style=""/>
+  <rect x="192.403" y="328.313" width="113.875" height="40.73" rx="5" ry="5" fill="#2c5282" stroke="#2b6cb0" stroke-width="2" style=""/>
+  <text x="102.389" y="245.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">DevEnv2 VM</text>
+  <text x="102.389" y="265.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Research</text>
+  <text x="102.389" y="280.633" font-family="Arial" font-size="10" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 10px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Jupyter Notebooks</text>
+  <rect x="205.056" y="331.446" width="12.653" height="9.399" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1" style=""/>
+  <rect x="203.158" y="334.579" width="16.449" height="9.399" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1" style=""/>
+  <rect x="318.928" y="328.313" width="113.875" height="40.73" rx="5" ry="5" fill="#2c5282" stroke="#2b6cb0" stroke-width="2" style=""/>
+  <text x="302.389" y="245.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">DevEnv3 VM</text>
+  <text x="302.389" y="265.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Fine-tuning</text>
+  <text x="302.389" y="280.633" font-family="Arial" font-size="10" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 10px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">TensorFlow</text>
+  <rect x="331.581" y="331.446" width="12.653" height="9.399" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1" style=""/>
+  <rect x="329.683" y="334.579" width="16.449" height="9.399" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1" style=""/>
+  <rect x="50.058" y="375.309" width="395.398" height="15.665" rx="3" ry="3" fill="#F6E05E" fill-opacity="0.4" stroke="#F6E05E" stroke-width="1" style=""/>
+  <text x="102.389" y="317.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Storage Pools</text>
+  <rect x="43.732" y="397.24" width="411.214" height="56.395" rx="8" ry="8" fill="#38a169" fill-opacity="0.2" stroke="#38a169" stroke-width="2" style=""/>
+  <text x="102.389" y="355.633" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 20px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Pre-Production Environments (Containers)</text>
+  <rect x="81.69" y="416.039" width="148.67" height="31.331" rx="5" ry="5" fill="#276749" stroke="#38a169" stroke-width="2" style=""/>
+  <text x="-45.607" y="385.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">API Services</text>
+  <text x="-45.607" y="405.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">FastAPI (LXC Container)</text>
+  <rect x="91.179" y="422.305" width="13.918" height="9.399" fill="#68D391" stroke="#38A169" stroke-width="1" style=""/>
+  <rect x="92.445" y="419.172" width="11.387" height="3.133" rx="1" ry="1" fill="#68D391" stroke="#38A169" stroke-width="1" style=""/>
+  <rect x="268.317" y="416.039" width="148.67" height="31.331" rx="5" ry="5" fill="#276749" stroke="#38a169" stroke-width="2" style=""/>
+  <text x="249.389" y="385.633" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 14px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Web UIs</text>
+  <text x="249.389" y="405.633" font-family="Arial" font-size="12" text-anchor="middle" fill="#e2e8f0" style="white-space: pre; font-size: 12px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">Gradio (Docker Container)</text>
+  <rect x="277.807" y="422.305" width="13.918" height="9.399" fill="#68D391" stroke="#38A169" stroke-width="1" style=""/>
+  <rect x="279.072" y="419.172" width="11.387" height="3.133" rx="1" ry="1" fill="#68D391" stroke="#38A169" stroke-width="1" style=""/>
+  <rect x="43.732" y="457.395" width="411.214" height="18.798" rx="5" ry="5" fill="#68D391" fill-opacity="0.6" stroke="#38A169" stroke-width="2" style=""/>
+  <text x="102.389" y="451.633" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1A202C" style="white-space: pre; font-size: 18px;" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)">NVIDIA Backend (CUDA)</text>
+  <rect x="27.916" y="477.447" width="442.846" height="21.931" rx="5" ry="5" fill="#1a202c" fill-opacity="0.7" stroke="#4a5568" stroke-width="2" style=""/>
+  <g transform="matrix(0.632637, 0, 0, 0.626614, 62.713, 488.1)" style="">
+    <circle cx="0" y="0" r="6" fill="#DD6B20"/>
+    <text x="10" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">Node</text>
+    <circle cx="60" y="0" r="6" fill="#3182CE"/>
+    <text x="70" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">WAN</text>
+    <circle cx="120" y="0" r="6" fill="#4FD1C5"/>
+    <text x="130" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">LAN</text>
+    <circle cx="180" y="0" r="6" fill="#FC8181"/>
+    <text x="190" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">Exposed</text>
+    <circle cx="250" y="0" r="6" fill="#48BB78"/>
+    <text x="260" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">Active</text>
+    <circle cx="310" y="0" r="6" fill="#ECC94B"/>
+    <text x="320" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">HA</text>
+    <circle cx="370" y="0" r="6" fill="#6B46C1"/>
+    <text x="380" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">AI Services</text>
+    <rect x="460" y="-5" width="20" height="10" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1"/>
+    <rect x="457" y="0" width="26" height="10" rx="2" ry="2" fill="#A0AEC0" stroke="#CBD5E0" stroke-width="1"/>
+    <text x="490" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">VM</text>
+    <rect x="530" y="-1" width="22" height="10" rx="0" ry="0" fill="#68D391" stroke="#38A169" stroke-width="1"/>
+    <rect x="532" y="-5" width="18" height="4" rx="1" ry="1" fill="#68D391" stroke="#38A169" stroke-width="1"/>
+    <text x="560" y="4" font-family="Arial" font-size="12" text-anchor="start" fill="#e2e8f0" style="white-space: pre;">Container</text>
+  </g>
+  <path d="M 122.813 369.043 L 155.71 416.039" stroke="#A3BFFA" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" style=""/>
+  <path d="M 375.865 369.043 L 342.336 416.039" stroke="#A3BFFA" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" style=""/>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px;" x="-65.597" y="-3.392" transform="matrix(0.632637, 0, 0, 0.626614, 184.563, 186.928)"> </text>
+</svg>

@@ -1,0 +1,39 @@
+.md-footer {
+  /* Customize footer background */
+  background-color: #1a1a1a;
+}
+
+.md-footer-meta {
+  /* Customize bottom footer */
+  background-color: #0f0f0f;
+  min-height: 0.05rem;
+  padding: 0.05rem;
+}
+
+/* Make footer content flex */
+.md-footer-meta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;  /* space between logo and copyright */
+}
+
+/* Logo styling */
+.footer-logo {
+  height: auto;  /* adjust size as needed */
+  width: 500px;
+}
+
+/* Copyright text */
+.md-copyright {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.5rem;
+  margin: 0;  /* remove default margins */
+}
+
+/* Center container for logo */
+.footer-logo-container {
+  text-align: center;
+  width: 100%;
+}

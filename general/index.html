@@ -1,0 +1,1431 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../infraestructura/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>General - Demostrador CICD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ciclo-de-vida-del-proyecto-ia-educativo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Demostrador CICD" class="md-header__button md-logo" aria-label="Demostrador CICD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Demostrador CICD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              General
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mikel-diez/demostradorcicd" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mikel-diez/demostradorcicd
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Demostrador CICD" class="md-nav__button md-logo" aria-label="Demostrador CICD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Demostrador CICD
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mikel-diez/demostradorcicd" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mikel-diez/demostradorcicd
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuracion-de-infraestructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configuración de Infraestructura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuración de Infraestructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-instalacion-y-configuracion-de-proxmox-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Instalación y Configuración de Proxmox VE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-creacion-de-plantillas-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Creación de Plantillas Base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-configuracion-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Configuración de Almacenamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entornos-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Entornos de Desarrollo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Entornos de Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-configuracion-de-entorno-de-desarrollo-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Configuración de Entorno de Desarrollo Individual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-control-de-versiones-y-colaboracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Control de Versiones y Colaboración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-gestion-de-datos-y-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Gestión de Datos y Datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-experimentacion-y-entrenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Experimentación y Entrenamiento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Experimentación y Entrenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-frameworks-y-bibliotecas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Frameworks y Bibliotecas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-seguimiento-de-experimentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Seguimiento de Experimentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-gestion-de-recursos-computacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Gestión de Recursos Computacionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-evaluacion-y-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Evaluación y Benchmarking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Evaluación y Benchmarking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-metricas-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Métricas de Evaluación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-benchmarking-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Benchmarking de Modelos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-auditoria-y-evaluacion-etica" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Auditoría y Evaluación Ética
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-optimizacion-y-preparacion-para-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Optimización y Preparación para Producción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Optimización y Preparación para Producción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-optimizacion-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Optimización de Modelos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-empaquetado-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Empaquetado de Modelos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-documentacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Documentación Técnica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-despliegue-y-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Despliegue y Operación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Despliegue y Operación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-infraestructura-de-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Infraestructura de Serving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-apis-y-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 APIs y Integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-monitorizacion-en-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Monitorización en Producción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-feedback-loop-y-mejora-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Feedback Loop y Mejora Continua
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-casos-de-estudio-educativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Casos de Estudio Educativos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Casos de Estudio Educativos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-aplicaciones-de-ia-generativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Aplicaciones de IA Generativa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-sistemas-de-vision-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Sistemas de Visión Artificial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-procesamiento-de-lenguaje-natural" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Procesamiento de Lenguaje Natural
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Infraestructura
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Infraestructura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infraestructura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infraestructura/cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cluster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infraestructura/plantillas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plantillas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aplicaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuracion-de-infraestructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configuración de Infraestructura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuración de Infraestructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-instalacion-y-configuracion-de-proxmox-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Instalación y Configuración de Proxmox VE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-creacion-de-plantillas-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Creación de Plantillas Base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-configuracion-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Configuración de Almacenamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entornos-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Entornos de Desarrollo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Entornos de Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-configuracion-de-entorno-de-desarrollo-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Configuración de Entorno de Desarrollo Individual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-control-de-versiones-y-colaboracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Control de Versiones y Colaboración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-gestion-de-datos-y-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Gestión de Datos y Datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-experimentacion-y-entrenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Experimentación y Entrenamiento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Experimentación y Entrenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-frameworks-y-bibliotecas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Frameworks y Bibliotecas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-seguimiento-de-experimentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Seguimiento de Experimentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-gestion-de-recursos-computacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Gestión de Recursos Computacionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-evaluacion-y-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Evaluación y Benchmarking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Evaluación y Benchmarking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-metricas-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Métricas de Evaluación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-benchmarking-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Benchmarking de Modelos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-auditoria-y-evaluacion-etica" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Auditoría y Evaluación Ética
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-optimizacion-y-preparacion-para-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Optimización y Preparación para Producción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Optimización y Preparación para Producción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-optimizacion-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Optimización de Modelos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-empaquetado-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Empaquetado de Modelos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-documentacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Documentación Técnica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-despliegue-y-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Despliegue y Operación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Despliegue y Operación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-infraestructura-de-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Infraestructura de Serving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-apis-y-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 APIs y Integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-monitorizacion-en-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Monitorización en Producción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-feedback-loop-y-mejora-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Feedback Loop y Mejora Continua
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-casos-de-estudio-educativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Casos de Estudio Educativos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Casos de Estudio Educativos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-aplicaciones-de-ia-generativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Aplicaciones de IA Generativa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-sistemas-de-vision-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Sistemas de Visión Artificial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-procesamiento-de-lenguaje-natural" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Procesamiento de Lenguaje Natural
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ciclo-de-vida-del-proyecto-ia-educativo">Ciclo de Vida del Proyecto IA Educativo</h1>
+<h2 id="1-configuracion-de-infraestructura">1. Configuración de Infraestructura</h2>
+<h3 id="11-instalacion-y-configuracion-de-proxmox-ve">1.1 Instalación y Configuración de Proxmox VE</h3>
+<ul>
+<li>Selección e instalación de hardware compatible</li>
+<li>Configuración de red optimizada para alta disponibilidad</li>
+<li>Implementación de almacenamiento ZFS con redundancia</li>
+<li>Configuración de VLAN para segmentación de entornos</li>
+<li>Optimización del hipervisor para cargas de trabajo GPU</li>
+<li>Integración de NVIDIA GPU passthrough</li>
+</ul>
+<h3 id="12-creacion-de-plantillas-base">1.2 Creación de Plantillas Base</h3>
+<ul>
+<li>Desarrollo de templates para entornos de desarrollo, preproducción y producción</li>
+<li>Hardening de seguridad para sistemas Linux</li>
+<li>Implementación de gestión automatizada de parches</li>
+<li>Configuración de GPU drivers optimizados</li>
+<li>Automatización de aprovisionamiento con Terraform/Ansible</li>
+</ul>
+<h3 id="13-configuracion-de-almacenamiento">1.3 Configuración de Almacenamiento</h3>
+<ul>
+<li>Implementación de sistema de archivos distribuido</li>
+<li>Configuración de almacenamiento de objetos para datasets</li>
+<li>Diseño de políticas de retención y ciclo de vida</li>
+<li>Implementación de sistema de backup incremental</li>
+</ul>
+<h2 id="2-entornos-de-desarrollo">2. Entornos de Desarrollo</h2>
+<h3 id="21-configuracion-de-entorno-de-desarrollo-individual">2.1 Configuración de Entorno de Desarrollo Individual</h3>
+<ul>
+<li>Implantación de JupyterHub multiusuario</li>
+<li>Configuración de entornos virtuales Python aislados</li>
+<li>Instalación de IDEs especializados (VSCode Server, PyCharm)</li>
+<li>Implementación de gestión de dependencias reproducible</li>
+<li>Configuración de acceso a GPUs compartidas con cuotas</li>
+</ul>
+<h3 id="22-control-de-versiones-y-colaboracion">2.2 Control de Versiones y Colaboración</h3>
+<ul>
+<li>Despliegue de GitLab/GitHub Enterprise</li>
+<li>Implementación de flujos CI/CD para notebooks</li>
+<li>Configuración de políticas de revisión de código</li>
+<li>Automatización de entornos virtuales consistentes</li>
+<li>Integración con gestión de proyectos (Jira/Linear)</li>
+</ul>
+<h3 id="23-gestion-de-datos-y-datasets">2.3 Gestión de Datos y Datasets</h3>
+<ul>
+<li>Implementación de catalogación de datasets</li>
+<li>Configuración de versionado de datos con DVC</li>
+<li>Integración con sistemas de anotación para etiquetado</li>
+<li>Implementación de transformaciones reproducibles</li>
+<li>Configuración de caché distribuido de datasets</li>
+</ul>
+<h2 id="3-experimentacion-y-entrenamiento">3. Experimentación y Entrenamiento</h2>
+<h3 id="31-frameworks-y-bibliotecas">3.1 Frameworks y Bibliotecas</h3>
+<ul>
+<li>Configuración optimizada de PyTorch/TensorFlow</li>
+<li>Instalación de aceleradores de entrenamiento</li>
+<li>Implementación de paralelismo de datos/modelos</li>
+<li>Integración con bibliotecas de optimización automática</li>
+</ul>
+<h3 id="32-seguimiento-de-experimentos">3.2 Seguimiento de Experimentos</h3>
+<ul>
+<li>Configuración de MLflow/W&amp;B para tracking</li>
+<li>Implementación de sistema de logs estructurados</li>
+<li>Diseño de dashboards de visualización de experimentos</li>
+<li>Automatización de reportes de progreso</li>
+<li>Integración con sistemas de notificación</li>
+</ul>
+<h3 id="33-gestion-de-recursos-computacionales">3.3 Gestión de Recursos Computacionales</h3>
+<ul>
+<li>Implementación de sistemas de colas para entrenamientos</li>
+<li>Configuración de políticas de asignación de GPUs</li>
+<li>Monitorización de uso de recursos en tiempo real</li>
+<li>Implementación de mecanismos de priorización</li>
+</ul>
+<h2 id="4-evaluacion-y-benchmarking">4. Evaluación y Benchmarking</h2>
+<h3 id="41-metricas-de-evaluacion">4.1 Métricas de Evaluación</h3>
+<ul>
+<li>Implementación de framework de evaluación unificado</li>
+<li>Configuración de métricas específicas por dominio</li>
+<li>Automatización de evaluaciones comparativas</li>
+<li>Integración con datasets de prueba estandarizados</li>
+</ul>
+<h3 id="42-benchmarking-de-modelos">4.2 Benchmarking de Modelos</h3>
+<ul>
+<li>Configuración de pruebas de rendimiento estandarizadas</li>
+<li>Implementación de medición de latencia y throughput</li>
+<li>Evaluación de eficiencia computacional y energética</li>
+<li>Análisis comparativo con modelos estado del arte</li>
+<li>Medición de escalabilidad con diferentes recursos</li>
+</ul>
+<h3 id="43-auditoria-y-evaluacion-etica">4.3 Auditoría y Evaluación Ética</h3>
+<ul>
+<li>Implementación de pruebas de sesgo y equidad</li>
+<li>Configuración de evaluaciones de privacidad</li>
+<li>Análisis de robustez y adversariales</li>
+<li>Documentación automatizada de limitaciones</li>
+</ul>
+<h2 id="5-optimizacion-y-preparacion-para-produccion">5. Optimización y Preparación para Producción</h2>
+<h3 id="51-optimizacion-de-modelos">5.1 Optimización de Modelos</h3>
+<ul>
+<li>Implementación de técnicas de cuantización</li>
+<li>Configuración de pruning y compresión</li>
+<li>Optimización con NVIDIA TensorRT</li>
+<li>Distilación de conocimiento para modelos ligeros</li>
+<li>Implementación de inferencia de baja precisión</li>
+</ul>
+<h3 id="52-empaquetado-de-modelos">5.2 Empaquetado de Modelos</h3>
+<ul>
+<li>Conversión a formatos optimizados (ONNX, TorchScript)</li>
+<li>Creación de contenedores Docker optimizados</li>
+<li>Configuración de entornos de ejecución mínimos</li>
+<li>Implementación de versionado semántico de modelos</li>
+<li>Automatización de pruebas de compatibilidad</li>
+</ul>
+<h3 id="53-documentacion-tecnica">5.3 Documentación Técnica</h3>
+<ul>
+<li>Generación automática de documentación de modelos</li>
+<li>Implementación de model cards estandarizados</li>
+<li>Documentación de parámetros y limitaciones</li>
+<li>Creación de guías de despliegue e integración</li>
+</ul>
+<h2 id="6-despliegue-y-operacion">6. Despliegue y Operación</h2>
+<h3 id="61-infraestructura-de-serving">6.1 Infraestructura de Serving</h3>
+<ul>
+<li>Implementación de plataformas de serving (TorchServe, TF Serving)</li>
+<li>Configuración de balanceadores de carga</li>
+<li>Implementación de escalado automático</li>
+<li>Configuración de routing inteligente</li>
+<li>Implementación de caché de inferencia</li>
+</ul>
+<h3 id="62-apis-y-integracion">6.2 APIs y Integración</h3>
+<ul>
+<li>Desarrollo de APIs RESTful con FastAPI</li>
+<li>Implementación de servicios gRPC para baja latencia</li>
+<li>Configuración de documentación automática (Swagger)</li>
+<li>Implementación de gestión de versiones de API</li>
+<li>Integración con sistemas de autenticación</li>
+</ul>
+<h3 id="63-monitorizacion-en-produccion">6.3 Monitorización en Producción</h3>
+<ul>
+<li>Configuración de Prometheus/Grafana</li>
+<li>Implementación de alertas proactivas</li>
+<li>Monitorización de drift de datos</li>
+<li>Seguimiento de latencia y throughput</li>
+<li>Análisis de logs centralizados con ELK</li>
+</ul>
+<h3 id="64-feedback-loop-y-mejora-continua">6.4 Feedback Loop y Mejora Continua</h3>
+<ul>
+<li>Implementación de captura de retroalimentación</li>
+<li>Configuración de reentrenamiento automático</li>
+<li>Implementación de A/B testing de modelos</li>
+<li>Automatización de evalución continua</li>
+<li>Integración de ciclo de mejora con desarrollo</li>
+</ul>
+<h2 id="7-casos-de-estudio-educativos">7. Casos de Estudio Educativos</h2>
+<h3 id="71-aplicaciones-de-ia-generativa">7.1 Aplicaciones de IA Generativa</h3>
+<ul>
+<li>Implementación de pipeline completo de fine-tuning</li>
+<li>Configuración de sistemas de generación de imágenes</li>
+<li>Desarrollo de aplicaciones conversacionales</li>
+<li>Implementación de técnicas RLHF</li>
+</ul>
+<h3 id="72-sistemas-de-vision-artificial">7.2 Sistemas de Visión Artificial</h3>
+<ul>
+<li>Configuración de procesamiento de video en tiempo real</li>
+<li>Implementación de detección y seguimiento de objetos</li>
+<li>Desarrollo de sistemas de segmentación semántica</li>
+<li>Integración con sistemas de control robotizados</li>
+</ul>
+<h3 id="73-procesamiento-de-lenguaje-natural">7.3 Procesamiento de Lenguaje Natural</h3>
+<ul>
+<li>Implementación de análisis de sentimiento multilingüe</li>
+<li>Configuración de sistemas de extracción de información</li>
+<li>Desarrollo de motores de búsqueda semántica</li>
+<li>Implementación de sistemas de resumen automático</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="footer-logo-container">
+        <img src="assets/images/logos/banner.png" alt="Logo" class="footer-logo">
+      </div>
+      <div class="md-copyright">
+        Copyright &copy; 2024 Mikel Diez
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "navigation.instant", "navigation.instant.progress"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
