@@ -62,7 +62,7 @@ Plataforma integral de inteligencia artificial diseñada como entorno educativo 
 ## Diagrama General
 
 
-<center> ![Arquitectura del sistema](assets/images/diagramas/diagrama-general.drawio.png) </center>
+<center> ![Arquitectura del sistema](assets/images/diagramas/improved-proxmox-cluster.svg) </center>
 ---
 
 
